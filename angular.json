@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "employee-app": {
+    "employeeApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -53,13 +53,7 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.development.ts"
-                }
-              ]
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -68,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "employee-app:build:production"
+              "buildTarget": "employeeApp:build:production"
             },
             "development": {
-              "buildTarget": "employee-app:build:development"
+              "buildTarget": "employeeApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "employee-app:build"
+            "buildTarget": "employeeApp:build"
           }
         },
         "test": {
@@ -102,8 +96,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "53998a81-b4fb-438e-89a1-4acd74186a89"
   }
 }
