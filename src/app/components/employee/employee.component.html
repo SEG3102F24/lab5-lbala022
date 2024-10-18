@@ -1,0 +1,77 @@
+<a class="btn btn-primary" [routerLink]="['/employees']">Employee List</a>
+<div class="container">
+  <h1>Employee Entry Form</h1>
+  <div *ngIf="!submitted">
+    <div class="mb-3">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        required
+        [(ngModel)]="employee.name"
+        name="name"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="dob">Date of Birth:</label>
+      <input
+        type="date"
+        class="form-control"
+        id="dateOfBirth"
+        required
+        [(ngModel)]="employee.dateOfBirth"
+        name="dateOfBirth"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="city">City:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="city"
+        required
+        [(ngModel)]="employee.city"
+        name="city"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="salary">Salary:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="salary"
+        required
+        [(ngModel)]="employee.salary"
+        name="salary"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="gender">Gender:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="gender"
+        required
+        [(ngModel)]="employee.gender"
+        name="gender"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="email">Email:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        required
+        [(ngModel)]="employee.email"
+        name="email"
+      />
+    </div>
+    <button (click)="saveEmployee()" class="btn btn-success">Submit</button>
+  </div>
+</div>
